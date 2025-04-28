@@ -15,6 +15,12 @@ const Circle = styled(Box)`
 const Text = styled.span`
   color: white;
 `;
+const Btn = styled.button`
+  background-color: tomato;
+`;
+const Input = styled.input.attrs({ required: true })`
+  background-color: whitesmoke;
+`;
 function App() {
   return (
     <Father>
@@ -22,6 +28,11 @@ function App() {
         <Text>Hello</Text>
       </Box>
       <Circle bgcolor="tomato" />
+      {/* as를 사용해서 태그를 바꿀 수 있음 */}
+      <Btn as="a" href="https://www.naver.com/">
+        로그인
+      </Btn>
+      <Input />
     </Father>
   );
 }
